@@ -9,6 +9,17 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        toggle_qwerty: toggle_qwerty {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TOGGLE_QWERTY";
+            bindings = <&to>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1000>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,11 +33,11 @@
 
             display-name = "Qwerty";
             bindings = <
-&kp ESC    &kp N1       &kp N2       &kp N3       &kp N4        &kp N5                         &kp N6  &kp N7    &kp N8     &kp N9   &lt 4 N0  &kp DELETE
-&kp TAB    &lt 1 Q      &kp W        &kp E        &kp R         &kp T                          &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL  &kp A        &kp S        &kp D        &kp F         &kp G                          &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V   &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                     &kp LMETA    &kp LEFT_ALT  &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp RMETA
+&kp ESC    &kp N1              &kp N2       &kp N3       &kp N4        &kp N5                         &kp N6  &kp N7    &kp N8     &kp N9   &lt 4 N0  &kp DELETE
+&kp TAB    &toggle_qwerty 1 Q  &kp W        &kp E        &kp R         &kp T                          &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
+&kp LCTRL  &kp A               &kp S        &kp D        &kp F         &kp G                          &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &mt LC(Z) Z         &mt LC(X) X  &mt LC(C) C  &mt LC(V) V   &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                            &kp LMETA    &kp LEFT_ALT  &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp RMETA
             >;
         };
 
@@ -38,13 +49,13 @@
             // | SHIFT |  Z  |  X  |  C   |  D   |  V   |   "["  |  |  "]"  |  K   |  H    |  ,    |  .   |   /   | SHIFT |
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
-            display-name = "Base";
+            display-name = "Colemak";
             bindings = <
-&trans  &trans       &trans       &trans       &trans  &trans                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &lt 0 Q      &kp W        &kp F        &kp P   &kp B                          &kp J   &kp L   &kp U   &kp Y   &trans  &trans
-&trans  &kp A        &kp R        &kp S        &kp T   &kp G                          &kp M   &kp N   &kp E   &kp I   &kp O   &trans
-&trans  &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C  &kp D   &mt LC(V) V  &trans    &trans  &kp K   &kp H   &trans  &trans  &trans  &trans
-                                  &trans       &trans  &mo 1        &trans    &trans  &mo 2   &trans  &trans
+&trans  &trans              &trans       &trans       &trans  &trans                         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &toggle_qwerty 0 Q  &kp W        &kp F        &kp P   &kp B                          &kp J   &kp L   &kp U   &kp Y   &trans  &trans
+&trans  &kp A               &kp R        &kp S        &kp T   &kp G                          &kp M   &kp N   &kp E   &kp I   &kp O   &trans
+&trans  &mt LC(Z) Z         &mt LC(X) X  &mt LC(C) C  &kp D   &mt LC(V) V  &trans    &trans  &kp K   &kp H   &trans  &trans  &trans  &trans
+                                         &trans       &trans  &mo 1        &trans    &trans  &mo 2   &trans  &trans
             >;
         };
 
