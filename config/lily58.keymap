@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -33,7 +34,7 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
-            display-name = "Base";
+            display-name = "Home";
             bindings = <
 &kp GRAVE   &kp N1  &kp N2                 &kp N3                   &kp N4                     &kp N5                               &kp N6  &kp N7                      &kp N8                    &kp N9                  &kp N0    &kp DELETE
 &kp TAB     &kp Q   &kp W                  &kp E                    &kp R                      &kp T                                &kp Y   &kp U                       &kp I                     &kp O                   &kp P     &kp EQUAL
@@ -53,7 +54,7 @@
             // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "Lower";
+            display-name = "Numbers";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans        &trans            &trans             &trans                &trans                 &trans
 &kp F1      &kp EXCL      &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                     &kp CARET     &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HOME
@@ -73,7 +74,7 @@
             // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "Raise";
+            display-name = "Movement";
             bindings = <
 &trans  &trans  &trans    &trans          &trans           &trans                     &trans       &trans          &trans          &trans           &trans     &trans
 &kp F1  &kp F2  &kp F3    &kp UP_ARROW    &kp F5           &kp F6                     &kp N6       &mkp MB1        &mmv MOVE_UP    &mkp MB2         &kp N0     &msc SCRL_UP
