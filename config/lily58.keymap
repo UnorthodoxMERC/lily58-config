@@ -55,11 +55,11 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans        &trans         &trans             &trans                &trans                 &trans
-&kp F1      &kp EXCL      &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                     &kp CARET     &kp AMPERSAND  &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HOME
-&kp GRAVE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                          &kp NUMBER_6  &kp N7         &kp N8             &kp N9                &kp N0                 &kp TILDE
-&trans      &trans        &trans        &kp HOME      &kp END       &trans        &trans    &trans  &kp PIPE      &kp MINUS      &kp RIGHT_BRACKET  &kp LBRC              &kp RBRC               &kp PIPE
-                                        &trans        &trans        &trans        &trans    &trans  &trans        &trans         &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans        &trans            &trans             &trans                &trans                 &trans
+&kp F1      &kp EXCL      &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                     &kp CARET     &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HOME
+&kp GRAVE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                          &kp NUMBER_6  &kp N7            &kp N8             &kp N9                &kp N0                 &kp TILDE
+&trans      &trans        &trans        &kp HOME      &kp END       &trans        &trans    &trans  &kp PIPE      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LBRC              &kp RBRC               &kp PIPE
+                                        &trans        &trans        &trans        &trans    &trans  &trans        &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
