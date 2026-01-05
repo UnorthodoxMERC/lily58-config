@@ -29,6 +29,8 @@
             label = "ESC_LAYER_3_TOG";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&tog 3>;
+
+            tapping-term-ms = <200>;
         };
     };
 
